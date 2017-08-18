@@ -38,3 +38,30 @@ run it the standard way, as follows:
 
 The site should now be visible as it was a moment ago, at [http://localhost:8000](http://localhost:8000)
 and you can now begin editing the files for the site in your `mysite` folder to taste.
+
+## What next?
+At this point, you will want to add some templates to create your own UI-theme, add some 
+object-models and admin UI bits, etc.  However, his tutorial will not go into that detail
+and instead we will refer you to the awesome documentation at the following locations:
+
+*  [https://docs.djangoproject.com/en/1.11/intro/tutorial01/](https://docs.djangoproject.com/en/1.11/intro/tutorial01/)
+*  [https://djangobook.com/](https://djangobook.com/)
+*  [http://docs.django-cms.org/en/release-3.4.x/](http://docs.django-cms.org/en/release-3.4.x/)
+
+### Baking It In
+After you have your project where you want it, with the theme, data-models, admin-ui, and 
+etc, just the way you want it (for a first release, at any rate) - you will want to make 
+the application 'deploy-able'.  There are a few steps to this process.
+
+1) Create a database container for more robust backend storage, and connect the project to it
+2) Unlink the local volume mapping for the project files and instead copy them into the 
+container for consitant and reliable deployment to swarm or other dynamic hosting environments, and then finally
+3) Publish the application to a registry
+
+These remaining steps (and many more) will be detailed in other project tutorials that 
+will follow this one.
+
+## Contact Us
+If you are wanting additional help or wish to discuss suggestions, additions or changes 
+to our tutorial (or anything really) - please feel free to join us on 
+[Discord](https://discord.gg/ADkJc3z)!  
