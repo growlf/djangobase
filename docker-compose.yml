@@ -12,7 +12,6 @@ services:
         ports:
             - "8000:8000"
         volumes:
-            - /var/run/docker.sock:/var/run/docker.sock
             - $PWD:/usr/src/app
 
         entrypoint: python manage.py runserver 0.0.0.0:8000
