@@ -73,6 +73,14 @@ target/
 # pyenv
 .python-version
 
+# JetBrains
+.idea/
+
+# Django
+/media/
+/static/
+/project.db
+
 # celery beat schedule file
 celerybeat-schedule
 
