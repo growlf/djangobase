@@ -1,8 +1,17 @@
 # djangobase
+
+## Purpose
 A starter project to bootstrap development with Docker and Django.
 
-This project is not intended to be used as-is, but rather as a starter seed to grow 
-your own project from.
+This project is not intended to be used as-is, but rather as a starter 'seed' to grow 
+your own web application project from.
+
+## Intended Audience
+
+Beginning developers who have a basic understanding of networking, operating systems 
+and the python language, who wish to create a deployable, reliable web application.
+
+A more complete and introductory version of this brief tutorial will be available soon.
 
 ## Getting Started
 To begin, ensure that you already have Docker Engine installed and configured.  Please see 
@@ -45,12 +54,12 @@ fine to use this during development as-is)
 
 ## What next?
 At this point, you will want to add some templates to create your own UI-theme, add some 
-object-models and admin UI bits, etc.  However, his tutorial will not go into that detail
+object-models and admin UI bits, etc.  However, this tutorial will not go into that detail
 and instead we will refer you to the awesome documentation at the following locations:
 
 *  [https://docs.djangoproject.com/en/1.11/intro/tutorial01/](https://docs.djangoproject.com/en/1.11/intro/tutorial01/)
 *  [https://djangobook.com/](https://djangobook.com/)
-*  [http://docs.django-cms.org/en/release-3.4.x/](http://docs.django-cms.org/en/release-3.4.x/)
+*  [http://docs.django-cms.org/](http://docs.django-cms.org/)
 
 ### Baking It In
 After you have your project where you want it, with the theme, data-models, admin-ui, and 
@@ -59,7 +68,7 @@ the application 'deploy-able'.  There are a few steps to this process.
 
 1) Create a database container for more robust backend storage, and connect the project to it
 2) Unlink the local volume mapping for the project files and instead copy them into the 
-container for consitant and reliable deployment to swarm or other dynamic hosting environments, and then finally
+container for consistent and reliable deployment to swarm or other dynamic hosting environments, and then finally
 3) Publish the application to a registry
 
 These remaining steps (and many more) will be detailed in other project tutorials that 
