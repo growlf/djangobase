@@ -39,6 +39,10 @@ run it the standard way, as follows:
 The site should now be visible as it was a moment ago, at [http://localhost:8000](http://localhost:8000)
 and you can now begin editing the files for the site in your `mysite` folder to taste.
 
+You can log into your initial site with the default user name `admin` and password `admin` 
+(you should of course change this before publishing your site to the internet, but it is 
+fine to use this during development as-is)
+
 ## What next?
 At this point, you will want to add some templates to create your own UI-theme, add some 
 object-models and admin UI bits, etc.  However, his tutorial will not go into that detail
