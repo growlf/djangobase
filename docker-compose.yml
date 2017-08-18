@@ -1,0 +1,18 @@
+# Make sure to run
+#   docker-compose -f docker-compose-build.yml up --build
+# First, to make all of the application folders and files.
+
+version: '3'
+
+services:
+
+    mysite:
+        image: djangobase:base
+        container_name: mysite
+        ports:
+            - "8000:8000"
+        volumes:
+            - /var/run/docker.sock:/var/run/docker.sock
+            - $PWD:/usr/src/app
+
+        entrypoint: python manage.py runserver 0.0.0.0:8000
