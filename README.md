@@ -1,80 +1,87 @@
 # djangobase
 
-## Purpose
-A starter project to bootstrap development with Docker and Django.
+Djangobase is starter project to speed development with Docker and Django.
 
-This project is not intended to be used as-is, but rather as a starter base-line for 
-your own web application project.
+This project is not complete as-is; instead, it's a starting place for your own web 
+application project.  
 
 ## Intended Audience
 
-Beginning developers who have a basic understanding of networking, operating systems 
-and the python language, and who wish to create a deployable, reliable web application.
+Beginning developers with a basic understanding of networking, operating systems, and  
+the python language...and who wish to create a deployable, reliable web application.
 
-A more complete and introductory version of this brief tutorial will be available soon.
+A more detailed version of this tutorial will be available soon.  Stay tuned.
 
 ## Getting Started
-To begin, ensure that you already have Docker Engine installed and configured.  Please see 
-[https://docs.docker.com/engine/installation/](https://docs.docker.com/engine/installation/)
-for more information on how to do that.  Also ensure that you perform the 'optional task' 
-necessary to allow your user account to execute the docker command directly without using 
-`sudo` (this is detailed in the same instructions, further down the page).
+To begin, verify that:
 
-Now, also install Docker Compose - using the 'pip' method described at 
-[https://docs.docker.com/compose/install/](https://docs.docker.com/compose/install/)
-to enable the rest of our deployment and development capability.
+- The [Docker Engine](https://docs.docker.com/engine/installation/) is installed and 
+properly configured.
+
+- You've performed the _optional task_ that allows your user account to execute the 
+`docker` command without root access (that is, without using `sudo`).  (Details are 
+provided on the Docker installation page.) 
+
+Next, uses the `pip` command to install [Docker Compose](https://docs.docker.com/compose/install/) 
+to enable development and deployment capabilities.
 
 Finally, clone this project to your development system and name it something relevant to
-your site-name, like so:
+your site-name:
 
-`git clone git@github.com:growlf/djangobase.git mysite`
+> `git clone git@github.com:growlf/djangobase.git mysite`
 
-To start the server for the first time, `cd` into the directory (`mysite` in this 
-example), and execute the following command to generate required files and folders:
+To start the server for the first time, `cd` to your cloned project directory (`mysite` in this 
+example) and use the following command to generate required files and folders:
 
-`docker-compose -f docker-compose-build.yml up --build`
+> `docker-compose -f docker-compose-build.yml up --build`
 
-This command only needs to be done once (when you are first initializing the project) and 
-it will take a few minutes as it installs components into your container and generates the
-various files and folders necessary to run a Django web application.
+This needs to be done just once (when first initializing the project); it installs 
+required components into your container and generates supporting various files and folders
+required by a Django web application.
 
-Once this command completes, you should be able to browse to the URL - 
-[http://localhost:8000](http://localhost:8000) URL (assuming that you are developing on 
-your localhost system) - and see the initial website login.  After verifying that the 
-page comes up.  Simply press `ctrl-c` in the terminal to terminate the command, and then
-run it the standard way, as follows:
+When finished, browse [http://localhost:8000](http://localhost:8000) (assuming you're developing on 
+a local system) to open the initial website login.  After verifying that the 
+page is available, press `ctrl-c` in the terminal to terminate the command.
 
-`docker-compose up`
+To run the app normally: 
 
-The site should now be visible as it was a moment ago, at [http://localhost:8000](http://localhost:8000)
-and you can now begin editing the files for the site in your `mysite` folder to taste.
+> `docker-compose up`
 
-You can log into your initial site with the default user name `admin` and password `admin` 
-(you should, of course, change this before publishing your site to the internet but it is 
-fine to use this username/password as-is during development).
+The site should now be available at [http://localhost:8000](http://localhost:8000)
+and you can now begin editing the files in your `mysite` folder.
+
+The default username is `admin` and the defalt password is `admin`.  Change these before 
+public publication, preferably sooner rather than later. 
 
 ## What next?
-At this point you will want to add some templates to create your own UI-theme, add some 
-object-models, admin UI bits, etc - and eventually, create some content as well.  However, 
-this tutorial will not go into detail on that, and instead will refer you to the awesome 
-documentation at the following locations (for now):
+At this point, you'll want to:
+
+- Add templates to define the user interface/theme.
+- Add object models to manage app data
+- Create admininistration features
+- And, eventually, add some genuine content to the site.
+
+For help on these and related tasks, see:  
 
 *  [https://docs.djangoproject.com/en/1.11/intro/tutorial01/](https://docs.djangoproject.com/en/1.11/intro/tutorial01/)
 *  [https://djangobook.com/](https://djangobook.com/)
 *  [http://docs.django-cms.org/](http://docs.django-cms.org/)
 
 ### Baking It In
-After your project is set up the way you want it , you will want to make the application 'deployable'.  
-There are a few steps to accomplish this. Some of them will be:
+When your project is ready, you'll want to _deploy_ it.  To do so:
 
-1) Create a database container for more a robust backend storage, and connect the project to it
-2) Unlink the local volume mapping for the project files and instead copy them into the 
-container for consistent and reliable deployment to swarm or other dynamic hosting environments
-3) Publish the application to a Docker registry
-4) Determine a hosting environment to deploy your application for public access
+1) Create a database container to provide robust back-end storage and connect the project to it.
 
-These remaining steps, and many more, will be detailed in other project tutorials.
+2) `Unlink` the local volume mappings for the project files and then copy them into the 
+container for consistent and reliable deployment to your swarm or other dynamic hosting environments.
+
+3) Publish the application to a Docker registry.
+
+4) Determine a hosting environment to deploy your application for public access.
+
+These, and many more steps, will be detailed in future project tutorials.
 
 ## Contact Us
-If you require further assistance, or wish to discuss suggestions pertaining to additions or changes to this tutorial, 
-please feel free to join our [Discord](https://discord.gg/ADkJc3z) server! 
+For help or to provide feedback on this tutorial, please feel free to join our [Discord](https://discord.gg/ADkJc3z) server!
+
+(We also consider well-meaning contributions file via pull request.)
