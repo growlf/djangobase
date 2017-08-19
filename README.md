@@ -1,17 +1,17 @@
 # djangobase
 
-## Purpose
-A starter project to bootstrap development with Docker and Django.
-
-This project is not intended to be used as-is, but rather as a starter base-line for 
-your own web application project.
-
 ## Intended Audience
 
 Beginning developers who have a basic understanding of networking, operating systems 
 and the python language, and who wish to create a deployable, reliable web application.
 
 A more complete and introductory version of this brief tutorial will be available soon.
+
+## Purpose
+A starter project to bootstrap development with Docker and Django.
+
+This project is not intended to be used as-is, but rather as a starter base-line for 
+your own web application project.
 
 ## Getting Started
 To begin, ensure that you already have Docker Engine installed and configured.  Please see 
