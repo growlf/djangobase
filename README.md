@@ -27,7 +27,7 @@ to enable the rest of our deployment and development capability.
 Finally, clone this project to your development system and name it something relevant to
 your site-name, like so:
 
-`git clone git@github.com:growlf/djangobase.git mysite`
+`git clone https://github.com/growlf/djangobase.git mysite`
 
 To start the server for the first time, `cd` into the directory (`mysite` in this 
 example), and execute the following command to generate required files and folders:
