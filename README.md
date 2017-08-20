@@ -2,8 +2,9 @@
 
 Djangobase is starter project to speed development with Docker and Django.
 
-This project is not complete as-is; instead, it's a starting place for your own web 
-application project.  
+This project is not complete as-is; instead, it provides a starting place, one
+that lets you become familiar with the benefits of Docker without having to slog
+through the weeds during your first project. 
 
 ## Intended Audience
 
@@ -11,6 +12,12 @@ Beginning developers with a basic understanding of networking, operating systems
 the python language...and who wish to create a deployable, reliable web application.
 
 A more detailed version of this tutorial will be available soon.  Stay tuned.
+
+## Purpose
+A starter project to bootstrap development with Docker and Django.
+
+This project is not intended to be used as-is, but rather as a starter base-line for 
+your own web application project.
 
 ## Getting Started
 To begin, verify that:
@@ -84,4 +91,4 @@ These, and many more steps, will be detailed in future project tutorials.
 ## Contact Us
 For help or to provide feedback on this tutorial, please feel free to join our [Discord](https://discord.gg/ADkJc3z) server!
 
-(We also consider well-meaning contributions file via pull request.)
+(We also consider well-meaning contributions filed via pull request.)
