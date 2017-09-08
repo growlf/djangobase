@@ -1,17 +1,27 @@
-# Make sure to run
-#   docker-compose -f docker-compose-build.yml up --build
-# First, to make all of the application folders and files.
-
 version: '3'
 
 services:
 
-    mysite:
-        image: djangobase:base
-        container_name: mysite
+    djangoproject:
+        container_name: djangosite
+        image: djangobase:latest
+        build:
+            context: .
+            args:
+                appname: app
+                sitefqdn: "${HOSTNAME}"
         ports:
             - "8000:8000"
         volumes:
-            - $PWD:/usr/src/app
+            - media:/django/project/media
+            - static:/django/project/static
 
-        entrypoint: python manage.py runserver 0.0.0.0:8000
+volumes:
+    media:
+    static:
+
+## Raw:
+#    docker-compose run --rm --name djangosite -v ${PWD}/project:/var/django/project -p 8000:8000 djangoproject djangocms \
+#    --config-file /var/django/config.ini \
+#    --db mysql://djangosite:djangositeSQLpassword@djangodata/djangosite \
+#    -sp . app

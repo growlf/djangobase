@@ -1,0 +1,6 @@
+djangocms-installer
+docker
+docker-compose
+django-debug-toolbar
+docutils
+django-extensions
