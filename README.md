@@ -48,11 +48,11 @@ or `localhost` on port 8000 if you are running this on the local machine.
 
 ## DEVELOPMENT CYCLE
 
-Copy the generated code from the container into the local filesystem to make editing easier
+Copy the generated code from the container into the host's filesystem to make editing easier
 
     docker cp djangosite:/django/project ./
 
-Re-run the container using the local filesystem copy of the code. Edit files, add artifacts, etc - and then test
+Re-run the container using the host's filesystem copy of the code. Edit files, add artifacts, etc - and then test
 with the following:
 
     docker-compose run --rm --name devsite -v ${PWD}/project:/django/project -v media:/django/project/media -v static:/django/project/static -p 8000:8000 djangoproject
