@@ -19,7 +19,7 @@ for more information on how to do that.  Also ensure that you perform the 'optio
 necessary to allow your user account to execute the docker command directly without using 
 `sudo` (this is detailed in the same instructions, further down the page).
 
-Install 'Docker Compose' - using the instructions described at 
+Install 'Docker Compose' - using the instructions described at /itzg/dockerfiles/tree/master/minecraft-server
 [https://docs.docker.com/compose/install/](https://docs.docker.com/compose/install/)
 to enable the rest of our deployment and development capability.
 
@@ -27,13 +27,13 @@ Finally, clone this project to your development system and name it something rel
 your site-name, like so:
 
     git clone https://github.com/growlf/djangobase.git mysite
-    
+   
 Change `mysite` to what ever you wish - just make sure all other commands that reference this value 
 also match.
 
-To start the server for the first time, `cd` into the directory (`mysite` in this 
-example), and edit the `djangoproject:build:args:appname`, `sitefqdn` in this file to taste, and 
-also the `config.ini` and `requirement.txt` files as needed.  Next, execute the following command 
+To start the server for the first time, `cd` into the directory (```mysite``` in this 
+example), and edit the ```djangoproject:build:args:appname```, ```sitefqdn``` in this file to taste, and 
+also the ```config.ini``` and `requirement.txt` files as needed.  Next, execute the following command 
 to generate the initial required files and folders:
 
     docker-compose up --build
@@ -43,7 +43,7 @@ it will take a few minutes as it installs components into your container and gen
 various files and folders necessary to run a Django web application.
 
 Wait until you see the "Attaching to ..." message before stopping the command with CTL-C
-You can log into the site using the `admin` user and password `admin` by opening a browser to either the sitefqdn,
+You can log into the site using the ```admin``` user and password ```admin``` by opening a browser to either the sitefqdn,
 or `localhost` on port 8000 if you are running this on the local machine.
 
 ## DEVELOPMENT CYCLE
@@ -60,16 +60,16 @@ with the following:
 This will use the local filesystem copy of the Django site.  Stop the server with CTL-C at anytime, the container
 will automatically delete, but the project directory will remain on the local filesystem. You should be able to browse 
 to the URL - [http://localhost:8000](http://localhost:8000) URL (assuming that you are developing on your localhost 
-system) - and see the initial website login.  After verifying that the page comes up.  Simply press `ctrl-c` in the 
+system) - and see the initial website login.  After verifying that the page comes up.  Simply press ```ctrl-c``` in the 
 terminal to terminate the command, and then
 run it the standard way, as follows:
 
     docker-compose up
 
 The site should now be visible as it was a moment ago, at [http://localhost:8000](http://localhost:8000)
-and you can now begin editing the files for the site in your `mysite` folder to taste.
+and you can now begin editing the files for the site in your ```mysite``` folder to taste.
 
-You can log into your initial site with the default user name `admin` and password `admin` 
+You can log into your initial site with the default user name ```admin``` and password ```admin``` 
 (you should, of course, change this before publishing your site to the internet but it is 
 fine to use this username/password as-is during development).
 
@@ -105,3 +105,4 @@ These remaining steps, and many more, will be detailed in other project tutorial
 If you require further assistance, or wish to discuss suggestions pertaining to additions or changes to this tutorial, 
 please feel free to join our [Discord](https://discord.gg/ADkJc3z) server! 
 
+/itzg/dockerfiles/tree/master/minecraft-server
