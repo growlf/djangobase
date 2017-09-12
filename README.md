@@ -104,5 +104,3 @@ These remaining steps, and many more, will be detailed in other project tutorial
 ## Contact Us
 If you require further assistance, or wish to discuss suggestions pertaining to additions or changes to this tutorial, 
 please feel free to join our [Discord](https://discord.gg/ADkJc3z) server! 
-
-/itzg/dockerfiles/tree/master/minecraft-server
